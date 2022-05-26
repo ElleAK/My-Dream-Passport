@@ -1,0 +1,23 @@
+{
+  "name": "group-7-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElleAK/Group-7-Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ElleAK/Group-7-Project/issues"
+  },
+  "homepage": "https://github.com/ElleAK/Group-7-Project#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}

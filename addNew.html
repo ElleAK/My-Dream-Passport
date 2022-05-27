@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/addNewStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>New Destination</title>
+</head>
+<body>
+
+    <h1>Add a new destination...</h1>
+
+    <p>Click one of the links below to add an entry to your travel log 
+    or keep track of the places you would like to visit!</p>
+
+        <a href= "./visited.html"><button>I have traveled to this location</button></a>
+
+        <a href= "./dream.html"><button>I am dreaming of a vacation</button></a>
+
+
+        <h1>Add a trip to my log</h1>
+
+        <form>
+            <label for="location">Location:</label>
+            <input type="text" id="location"><br>
+    
+            <label for="date">Date of Departure:</label>
+            <input type="date" id="ddate"><br>
+            <label for="date">Return Date:</label>
+            <input type="date" id="rdate"><br>
+    
+            <label for="return">Would I travel here again?</label>
+            <input id="toggle-yes" name="toggle" type="radio">
+            <label for="toggle-yes">Yes</label>
+            <input id="toggle-no" name="toggle" type="radio">
+            <label for="toggle-no">No</label><br>
+    
+            <label for="transportation">How did I get there?</label><br>
+                <select id="transportation">
+                    <option value="car">Road Trip</option>
+                    <option value="boat">Cruise</option>
+                    <option value="plane">Plane</option>
+                </select>
+                <label for="other">Other:</label>
+                <input type="text" id="other"><br>
+    
+                <label for="description">How was the trip?:</label>
+                <input type="textarea" id="description" name="description"><br>
+    
+        </form>
+        
+        <h3>Rate this destination:</h3>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+    
+</body>
+</html>

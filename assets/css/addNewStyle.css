@@ -1,3 +1,20 @@
+:root {
+    --primary-color: ;
+    --secondary-color: ;
+    --tertiary-color: ;
+    --shadow-style-1: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-shadow: var(--shadow-style-1);
+}
+
 .checked {
     color: blue
 }

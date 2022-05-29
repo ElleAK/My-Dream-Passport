@@ -15,9 +15,9 @@
     <p>Click one of the links below to add an entry to your travel log 
     or keep track of the places you would like to visit!</p>
 
-        <a href= "./visited.html"><button>I have traveled to this location</button></a>
+        <button>I have traveled to this location</button>
 
-        <a href= "./dream.html"><button>I am dreaming of a vacation</button></a>
+        <button>I am dreaming of a vacation</button>
 
 
         <h1>Add a trip to my log</h1>
@@ -50,13 +50,35 @@
                 <input type="textarea" id="description" name="description"><br>
     
         </form>
-        
+        <!-- rating needs adjusting-->
         <h3>Rate this destination:</h3>
         <span class="fa fa-star checked"></span>
         <span class="fa fa-star checked"></span>
         <span class="fa fa-star checked"></span>
         <span class="fa fa-star"></span>
         <span class="fa fa-star"></span>
+
+    <h1>Add a destination to my wish list</h1>
+
+    <form>
+        <label for="location">Location:</label>
+        <input type="text" id="location"><br>
     
+        <label for="season">Preferred Season:</label>
+            <select id="season">
+        <option value="spring">Spring</option>
+        <option value="summer">Summer</option>
+        <option value="fall">Fall</option>
+        <option value="fall">Winter</option>
+            </select><br>
+
+        <label for="return">Do I plan to travel within the year?</label>
+        <input id="toggle-yes" name="toggle" type="radio">
+        <label for="toggle-yes">Yes</label>
+        <input id="toggle-no" name="toggle" type="radio">
+        <label for="toggle-no">No</label><br>
+    
+    </form>
+
 </body>
 </html>

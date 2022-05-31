@@ -1,3 +1,19 @@
-DROP DATABASE IF EXISTS group-7-project_db;
+DROP TABLE IF EXISTS visited;
+DROP TABLE IF EXISTS planned;
 
-CREATE DATABASE group-7-project_db;
+CREATE TABLE visited (
+  id INTEGER AUTO_INCREMENT PRIMARY KEY,
+  place VARCHAR(30) NOT NULL,
+  date VARCHAR (10) NOT NULL,
+  would_return BOOLEAN NOT NULL,
+  traveled_by VARCHAR (10) NOT NULL,
+  about_trip TEXT
+);
+
+CREATE TABLE planned (
+  id INTEGER AUTO_INCREMENT PRIMARY KEY,
+  place VARCHAR(30) NOT NULL,
+  season VARCHAR (10) NOT NULL,
+  one_year BOOLEAN NOT NULL,
+  to_do TEXT
+);

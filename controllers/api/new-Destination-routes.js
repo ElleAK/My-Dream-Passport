@@ -4,26 +4,28 @@ const {newDestination, user} = require('../../models')
 
 router.post('/all', async (req, res) => {
     const {
-      ,
-      ,
-      ,
-      ,
-      ,
+      id,
+      location,
+      dateOfDeparture,
+      returnDate,
+      wouldTravelAgain,
+      transportation,
+      tripComment,
       user_id,
     } = req.body;
-    const appointments = await Appointment.create({
-      Appointments_time: Appointments_time,
-      Appointments_date: Appointments_date,
-      Appointments_day: Appointments_day,
-      Appointments_text: Appointments_text,
-      Appointments_type: Appointments_type,
-      user_id,
+    const Destinations = await newDestination.create({
+        id: id,
+        location: location,
+        dateOfDeparture: dateOfDeparture,
+        returnDate: returnDate,
+        wouldTravelAgain: wouldTravelAgain,
+        transportation: transportation,
+        tripComment: tripComment,
+        user_id
     })
-      .then(appointments => res.json(appointments))
+      .then(Destinations => res.json(Destinations))
       .catch(err => {
         console.log(err);
         res.status(400).json(err);
       });
   });
-
-  newDestination

@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { index, newDestination, visited } = require('../models');
+const {  } = require('../models');
 
 router.get('/', (req, res) => {
     res.render('homepage', {

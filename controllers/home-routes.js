@@ -3,11 +3,11 @@ const sequelize = require('../config/connection');
 const { newDestination, visited } = require('../models');
 
 router.get('/', (req, res) => {
-    res.render('homepage', {
-      layout : 'main'
-      }
-    )
-    });
+  res.render('homepage', {
+    layout: 'main'
+  }
+  )
+});
 
 router.get('/login', (req, res) => {
   res.render('login');

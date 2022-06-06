@@ -1,10 +1,9 @@
-
 const router = require('express').Router();
 const { newDestination } = require('../../models');
 //routes will use /api/SignUp/ {route}
 router.get('/', async (req, res) => {
     //get route code here
-  res.render('signup');
+  res.render('add-new');
 });
 router.post('/', (req, res) => {
     console.log(req.body)

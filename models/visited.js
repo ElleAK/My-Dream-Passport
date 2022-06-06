@@ -13,7 +13,7 @@ visited.init(
         autoIncrement: true
       },
       location: {
-        type: DataTypes.BOOLEAN,
+        type: DataTypes.STRING,
         allowNull: false
       },
       dateOfDeparture: {

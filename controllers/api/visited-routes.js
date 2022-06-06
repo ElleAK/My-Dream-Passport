@@ -9,13 +9,13 @@ router.get('/', async (req, res) => {
 router.post('/', (req, res) => {
     console.log(req.body)
     visited.create({
-      id:                 req.body.id,
-    location:           req.body.location,
-    dateOfDeparture:    req.body.dateOfDeparture,
-    returnDate:         req.body.returnDate,
-    wouldTravelAgain:   req.body.wouldTravelAgain,
-    transportation:     req.body.transportation,
-    tripComment:        req.body.tripComment,
+      id:                           req.session.id,
+      visited_location:             req.body.visited_location,
+      visited_departure:            req.body.visited_departure,
+      visited_returnDate:           req.body.visited_returnDate,
+      visited_return:               req.body.visited_return,
+      visited_transportation:       req.body.visited_transportation,
+      visited_description:          req.body.visited_description,
   })
     .catch(err => {
         console.log(err);
@@ -23,7 +23,7 @@ router.post('/', (req, res) => {
     });
 });
 
-router.delete('/:id', withAuth, (req, res) => {
+router.delete('/:id', (req, res) => {
     visited.destroy({
     where: {
       id: req.params.id

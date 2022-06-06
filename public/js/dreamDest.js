@@ -18,7 +18,6 @@ const response = await fetch(`/api/posts`, {
   });
 
   if (response.ok) {
-      // dashboard??? do we even need lines 19-23?
     document.location.replace('/dream');
   } else {
     alert(response.statusText);

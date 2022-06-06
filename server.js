@@ -23,6 +23,11 @@ const hbs = exphbs.create({ helpers });
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(require('./controllers/'));
 
 
 // Starts the server to begin listening
@@ -30,3 +35,4 @@ app.listen(PORT, () => {
     console.log(`Server listening on: http://localhost:${PORT}`);
   });
   
+  console.log("it worked");

@@ -21,16 +21,15 @@
         </a>
 
         {{#if user}}
-        <button type="button" class="btn btn-light shadow">Log Out</button>
-        {{else}}
-        <button type="button" class="btn btn-light shadow">Log In</button>
-        {{/if}}
-
+        <a href="/logout"><button class="btn btn-light shadow">Log Out</button></a>
         <nav class="d-flex justify-content-around align-items-center">
-            <a href=""><button type="button" class="btn btn-primary shadow">New Destination</button></a>
-            <a href=""><button type="button" class="btn btn-primary shadow">Travel History</button></a>
-            <a href=""><button type="button" class="btn btn-primary shadow">Places I Want To Go</button></a>
+            <a href=""><button class="btn btn-primary shadow">New Destination</button></a>
+            <a href=""><button class="btn btn-primary shadow">Travel History</button></a>
+            <a href=""><button class="btn btn-primary shadow">Places I Want To Go</button></a>
         </nav>
+        {{else}}
+        <a href="/login"><button class="btn btn-light shadow">Get Started!</button></a>
+        {{/if}}
     </header>
     <main>
         {{{body}}}

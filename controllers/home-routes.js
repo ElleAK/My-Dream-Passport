@@ -12,10 +12,14 @@ router.get('/', (req, res) => {
         username: 'test_user'
       }
     });
-  });
+});
 
-  router.get('/login', (req, res) => {
-    res.render('login');
-  });
+router.get('/login', (req, res) => {
+  res.render('login');
+});
+
+router.get('/logout', (req, res) => {
+  res.redirect('/');
+});
 
 module.exports = router;

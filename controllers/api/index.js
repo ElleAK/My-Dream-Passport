@@ -1,11 +1,9 @@
 const router = require('express').Router();
+const newDestinationRoutes = require('./new-Destination-routes');
+const visitedRoutes = require('./visited-routes');
 
-const apiRoutes = require('./api');
+router.use('/visited', newDestinationRoutes);
+router.use('/newDestination', visitedRoutes);
 
-router.use('/api', apiRoutes);
-
-router.use((req, res) => {
-  res.status(404).end();
-});
 
 module.exports = router;

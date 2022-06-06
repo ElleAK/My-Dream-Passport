@@ -1,10 +1,15 @@
 {{#if loggedIn}}
-<h1>Places I've Visited</h1>
-<ul class="visited">
-    <li>
-        <p>Departure Date:{{ddate.date}} </p>
-        <p>Return Date:{{rdate.date}} </p>
-        <p></p>
-
-    </li>
-</ul>
+<h1>Places I dream of visiting</h1>
+<div class="log-container">
+    <div class="card-header">
+        <ul class="dream">
+            <li>
+                <p>Departure Date:{{ddate}} </p>
+                <p>Return Date:{{rdate}} </p>
+                <p>Mode of Transportation:{{transportation}}</p>
+                <p>My Experience:{{description}}</p>
+                <p>My Rating:{{rating}}</p>
+            </li>
+        </ul>
+    </div>
+</div>

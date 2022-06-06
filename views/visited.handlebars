@@ -1,0 +1,17 @@
+{{#if loggedIn}}
+<h1>Places I've Visited</h1>
+<div class="log-container">
+    <div class="card-header">
+        <ul class="visited">
+            <li>
+                <p>Departure Date:{{ddate}} </p>
+                <p>Return Date:{{rdate}} </p>
+        <!--how does radio work here?-->
+                <p>Would I return?{{toggle-yes.toggle-no}}</p>
+                <p>Mode of Transportation:{{transportation}}</p>
+                <p>My Experience:{{description}}</p>
+                <p>My Rating:{{rating}}</p>
+            </li>
+        </ul>
+    </div>
+</div>

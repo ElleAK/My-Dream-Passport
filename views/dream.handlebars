@@ -1,15 +1,21 @@
 {{#if loggedIn}}
+
 <h1>Places I dream of visiting</h1>
+
+<!--Answers to dream questions when logged in-->
 <div class="log-container">
     <div class="card-header">
         <ul class="dream">
             <li>
-                <p>Departure Date:{{ddate}} </p>
-                <p>Return Date:{{rdate}} </p>
-                <p>Mode of Transportation:{{transportation}}</p>
-                <p>My Experience:{{description}}</p>
-                <p>My Rating:{{rating}}</p>
+                <p>Location: {{location}}</p>
+                <p>Season:{{season}} </p>
+                <p>Do I want to travel within the year?{{year}}</p>
             </li>
         </ul>
     </div>
 </div>
+
+<!--if not logged in-->
+{{else}}
+<a href="/login">Please login to view your trip log.</a>
+{{/if}}

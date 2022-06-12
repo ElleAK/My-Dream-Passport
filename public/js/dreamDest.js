@@ -23,7 +23,7 @@ const response = await fetch(`/api/posts`, {
   });
 
   if (response.ok) {
-    document.location.replace();
+    document.location.reload();
   } else {
     alert(response.statusText);
   }

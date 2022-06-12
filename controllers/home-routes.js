@@ -20,24 +20,15 @@ router.get('/', (req, res) => {
 //       'dream_season',
 //       'dream_year'
 //     ],
-//     include: [
 //       {
-//         model: Comment,
-//         attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
-//         include: {
-//           model: User,
-//           attributes: ['username']
-//         }
-//       },
-//       {
-//         model: User,
+//         model: users,
 //         attributes: ['username']
 //       }
 //     ]
 //   })
-//     .then(dbPostData => {
-//       // pass a single post object into the homepage template
-//       res.render('homepage', dbPostData[0]);
+//     .then(dbnewDestData => {
+//       // pass a single post object into the dream.handlebars template
+//       res.render('dream', dbnewDestData[0]);
 //     })
 //     .catch(err => {
 //       console.log(err);
@@ -45,13 +36,40 @@ router.get('/', (req, res) => {
 //     });
 // });
 
+// router.get('/', (req, res) => {
+  //console.log(req.session);
+//   visited.findAll({
+//     attributes: [
+//       'id',
+//       'visited_location,'
+//       'visited_departure,'
+//       'visited_returnDate,'
+//       'visited_return,'
+//       'visited_transportation,'
+//       'visited_description'
+//     ],
+//       {
+//         model: users,
+//         attributes: ['username']
+//       }
+//     ]
+//   })
+//     .then(dbVisitedtData => {
+//       // pass a single post object into the visited.handlebars template
+//       res.render('visited', dbVisitedData[0]);
+//     })
+//     .catch(err => {
+//       console.log(err);
+//       res.status(500).json(err);
+//     });
+// });
 
 // login route
 router.get('/login', (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect('/');
-    return;
-  }
+  // if (req.session.loggedIn) {
+  //   res.redirect('/');
+  //   return;
+  // }
 
   res.render('login');
 });

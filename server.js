@@ -3,7 +3,7 @@ const path = require('path');
 const express = require('express');
 const exphbs = require('express-handlebars');
 const Agenda = require("agenda");
-const routes = require('./controllers/');
+//const routes = require('./controllers/');
 const session = require('express-session');
 
 // Sets up the Express App
@@ -25,7 +25,7 @@ const sess = {
 };
 app.use(session(sess));
 
-app.use(routes);
+//app.use(routes);
 // handles data from the request
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -38,9 +38,9 @@ app.set('view engine', 'handlebars');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-//app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 // static requests
-app.use(express.static('public'));
+//app.use(express.static('public'));
 
 app.use(require('./controllers/'));
 

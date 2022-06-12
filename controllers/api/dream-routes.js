@@ -7,7 +7,7 @@ const { dream } = require('../../models');
 //routes will use /api/SignUp/ {route}
 router.get('/', (req, res) => {
     //get route code here
-  res.render('singup');
+  res.render('signup');
 });
 
 // router.get('/', (req, res) => {

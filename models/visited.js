@@ -2,8 +2,10 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 const bcrypt = require('bcrypt');
 
+// Create Visited model
 class visited extends Model {}
 
+//Columns for model
 visited.init(
     {
       id: {
@@ -13,7 +15,7 @@ visited.init(
         autoIncrement: true
       },
       location: {
-        type: DataTypes.BOOLEAN,
+        type: DataTypes.STRING,
         allowNull: false
       },
       dateOfDeparture: {

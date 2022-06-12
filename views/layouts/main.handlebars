@@ -1,18 +1,15 @@
+{{!-- commented out if loggedIn temporarily so check routes --}}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
-
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/script.js" defer></script>
-    <title>{{title}}</title>
-
-    <link rel="stylesheet" href="./assets/css/style.css">
     <title>My Dream Passport</title>
-
+    <link rel="stylesheet" href="/public/stylesheets/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -25,27 +22,26 @@
             </div>
         </a>
 
-
-        {{#if user}}
-        <a href="/logout"><button class="btn btn-light shadow">Log Out</button></a>
+        {{!-- {{#if loggedIn}} --}}
+        <a href="/logout"><button id="logout" class="btn btn-light shadow">Log Out</button></a>
         <nav class="d-flex justify-content-around align-items-center">
-            <a href=""><button class="btn btn-primary shadow">New Destination</button></a>
-            <a href=""><button class="btn btn-primary shadow">Travel History</button></a>
-            <a href=""><button class="btn btn-primary shadow">Places I Want To Go</button></a>
-
-        <button type="button" class="btn btn-light shadow">Log In</button>
-                <nav class="d-flex justify-content-around align-items-center">
             <a href="/add-new"><button type="button" class="btn btn-primary shadow">New Destination</button></a>
             <a href="/visited"><button type="button" class="btn btn-primary shadow">Travel History</button></a>
             <a href="/dream"><button type="button" class="btn btn-primary shadow">Places I Want To Go</button></a>
-
         </nav>
-        {{else}}
+
+        {{!-- {{else}} --}}
         <a href="/login"><button class="btn btn-light shadow">Get Started!</button></a>
-        {{/if}}
+        {{!-- {{/if}} --}}
     </header>
     <main>
-        {{{body}}}
+        {{{ body }}}
     </main>
+      <!-- If the user is logged in, load the JS script for when they logout else load login-->
+  {{!-- {{#if loggedIn}} --}}
+  <script src="/js/logout.js"></script>
+  {{!-- {{else}} --}}
+  <script src="/js/login.js"></script>
+  {{!-- {{/if}} --}}
 </body>
 </html>

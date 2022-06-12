@@ -12,7 +12,7 @@ const loginFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.assign('/views/layouts/add-new.handlebars');
+        document.location.replace('/homepage/');
       } else {
         alert("Make sure email and password are correct and try again");
       }
@@ -34,7 +34,7 @@ const loginFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.assign('/add-new/');
+        document.location.replace('/homepage/');
       } else {
         alert("Something went wrong. Please try again.");
       }

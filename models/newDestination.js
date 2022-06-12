@@ -2,8 +2,11 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 const bcrypt = require('bcrypt');
 
+//create newDestination model
 class newDestination extends Model {}
 
+
+//Columns for model
 newDestination.init(
     {
       id: {

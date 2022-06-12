@@ -1,6 +1,8 @@
 
 const router = require('express').Router();
+// const sequelize = require('../../config/connection');
 const { newDestination } = require('../../models');
+
 //routes will use /api/SignUp/ {route}
 router.get('/', async (req, res) => {
     //get route code here
@@ -9,13 +11,10 @@ router.get('/', async (req, res) => {
 router.post('/', (req, res) => {
     console.log(req.body)
   newDestination.create({
-      id:                 req.body.id,
-    location:           req.body.location,
-    dateOfDeparture:    req.body.dateOfDeparture,
-    returnDate:         req.body.returnDate,
-    wouldTravelAgain:   req.body.wouldTravelAgain,
-    transportation:     req.body.transportation,
-    tripComment:        req.body.tripComment,
+    id:        req.body.id,
+    location:  req.body.location,
+    season:    req.body.season,
+    year:      req.body.year,
   })
     .catch(err => {
         console.log(err);

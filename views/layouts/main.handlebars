@@ -20,7 +20,7 @@
             </div>
         </a>
 
-        {{#if loggedIn}}
+        {{!-- {{#if loggedIn}} --}}
         <a href="/logout"><button id="logout" class="btn btn-light shadow">Log Out</button></a>
         <nav class="d-flex justify-content-around align-items-center">
             <a href="/add-new"><button type="button" class="btn btn-primary shadow">New Destination</button></a>
@@ -28,18 +28,18 @@
             <a href="/dream"><button type="button" class="btn btn-primary shadow">Places I Want To Go</button></a>
         </nav>
 
-        {{else}}
+        {{!-- {{else}} --}}
         <a href="/login"><button class="btn btn-light shadow">Get Started!</button></a>
-        {{/if}}
+        {{!-- {{/if}} --}}
     </header>
     <main>
         {{{ body }}}
     </main>
       <!-- If the user is logged in, load the JS script for when they logout else load login-->
-  {{#if loggedIn}}
+  {{!-- {{#if loggedIn}} --}}
   <script src="/js/logout.js"></script>
-  {{else}}
+  {{!-- {{else}} --}}
   <script src="/js/login.js"></script>
-  {{/if}}
+  {{!-- {{/if}} --}}
 </body>
 </html>

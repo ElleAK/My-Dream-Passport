@@ -1,6 +1,6 @@
 
 const router = require('express').Router();
-// const sequelize = require('../../config/connection');
+const sequelize = require('../../config/connection');
 const { newDestination } = require('../../models');
 
 //routes will use /api/SignUp/ {route}

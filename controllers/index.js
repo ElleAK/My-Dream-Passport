@@ -7,9 +7,9 @@ const homeRoutes = require('./home-routes');
 router.use('/api', apiRoutes);
 router.use('/', homeRoutes);
 
-router.use('/', (req, res) => {
-  res.render('homepage');
-});
+// router.use('/', (req, res) => {
+//   res.render('homepage');
+// });
 
 
 

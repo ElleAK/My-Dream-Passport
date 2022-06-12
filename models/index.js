@@ -1,5 +1,5 @@
 //import all models
-const newDestination = require('./newDestination');
+const dream = require('./dream');
 const visited = require('./visited');
 const users = require('./users');
 
@@ -7,4 +7,4 @@ const users = require('./users');
 
 
 
-module.exports = { newDestination, visited, users };
+module.exports = { dream, visited, users };

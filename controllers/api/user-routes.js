@@ -1,6 +1,36 @@
 const router = require('express').Router();
-const { users, newDestination, visited } = require('../../models');
+const { users, dream, visited } = require('../../models');
 
+
+router.get('/:id', (req, res) => {
+    users.findOne({
+      attributes: { exclude: ['password'] },
+      where: {
+        id: req.params.id
+      },
+      include: [
+        {
+          model: dream,
+          attributes: ['id', 'dream_location', 'dream_season', 'dream_year']
+        },
+        {
+          model: visited,
+          attributes: ['id', 'visited_location', 'visited_departure', 'visited_returnDate', 'visited_return', 'visited_transportation', 'visited_description'],
+        },
+      ]
+    })
+      .then(dbUsersData => {
+        if (!dbUsersData) {
+          res.status(404).json({ message: 'No user found with this id' });
+          return;
+        }
+        res.json(dbUsersData);
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
 
 // create new users
 router.post('/', async (req, res) => {
@@ -81,34 +111,6 @@ router.get('/', (req, res) => {
     });
 })
 
-router.get('/:id', (req, res) => {
-    users.findOne({
-      attributes: { exclude: ['password'] },
-      where: {
-        id: req.params.id
-      },
-      include: [
-        {
-          model: newDestination,
-          attributes: ['id', 'dream_location', 'dream_season', 'dream_year']
-        },
-        {
-          model: visited,
-          attributes: ['id', 'visited_location', 'visited_departure', 'visited_returnDate', 'visited_return', 'visited_transportation', 'visited_description'],
-        },
-      ]
-    })
-      .then(dbUserData => {
-        if (!dbUserData) {
-          res.status(404).json({ message: 'No user found with this id' });
-          return;
-        }
-        res.json(dbUserData);
-      })
-      .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-      });
-  });
+
 
   module.exports = router;

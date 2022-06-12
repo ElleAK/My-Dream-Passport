@@ -37,32 +37,38 @@ router.get('/dream', (req, res) => {
 });
 
 router.get('/visited', (req, res) => {
-  console.log(req.session);
-  visited.findAll({
-    attributes: [
-      'id',
-      'visited_location',
-      'visited_departure',
-      'visited_returnDate',
-      'visited_return',
-      'visited_transportation',
-      'visited_description'
-    ],
-    include: [
-      {
-        model: users,
-        attributes: ['username']
-      }
-    ]
-  })
-    .then(dbVisitedData => {
-      // pass a single post object into the visited.handlebars template
-      res.render('visited', dbVisitedData[0]);
-    })
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
-    });
+  res.render('visited');
+  // console.log(req.session);
+  // visited.findAll({
+  //   attributes: [
+  //     'id',
+  //     'visited_location',
+  //     'visited_departure',
+  //     'visited_returnDate',
+  //     'visited_return',
+  //     'visited_transportation',
+  //     'visited_description'
+  //   ],
+  //   include: [
+  //     {
+  //       model: users,
+  //       attributes: ['username']
+  //     }
+  //   ]
+  // })
+  //   .then(dbVisitedData => {
+  //     res.render('visited');
+  //     // pass a single post object into the visited.handlebars template
+  //     // res.render('visited', dbVisitedData[0]);
+  //   })
+  //   .catch(err => {
+  //     console.log(err);
+  //     res.status(500).json(err);
+  //   });
+});
+
+router.get('/add-new', (req, res) => {
+  res.render('add-new');
 });
 
 // login route

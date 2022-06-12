@@ -12,7 +12,7 @@ const loginFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/');
+        console.log('success');
       } else {
         alert("Make sure email and password are correct and try again");
       }
@@ -34,7 +34,7 @@ const loginFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/');
+        console.log('success')
       } else {
         alert("Something went wrong. Please try again.");
       }

@@ -10,27 +10,25 @@ const routes = require('./controllers/');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// // Set up sessions
-// const session = require('express-session');
-// const SequelizeStore = require('connect-session-sequelize')(session.Store);
+// Set up sessions
+const session = require('express-session');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
-// const sess = {
-//   secret: 'Super secret secret',
-//   cookie: {},
-//   resave: true,
-//   saveUninitialized: true,
-//   store: new SequelizeStore({
-//     db: sequelize
-//   })
-// };
+const sess = {
+  secret: 'Super secret secret',
+  cookie: {},
+  resave: true,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize
+  })
+};
 
-//app.use(session(sess));
+app.use(session(sess));
 
 // handles data from the request
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-// static requests
-app.use(express.static('public'));
 
 // Set Handlebars as the default template engine.
 const helpers = require('./utils/helpers');
@@ -41,9 +39,15 @@ app.set('view engine', 'handlebars');
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
-
+// static requests
+app.use(express.static('public'));
 
 app.use(require('./controllers/'));
+
+app.get('/', (req, res) => {
+  //Serves the body of the page main.handlebars to the container homepage.handlebars
+  res.render('main', {layout : 'homepage'});
+  });
 
 // Starts the server to begin listening
 sequelize.sync({ force: false}).then (() => {

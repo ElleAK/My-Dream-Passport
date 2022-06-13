@@ -1,5 +1,5 @@
 {
-  "name": "group-7-project",
+  "name": "my-dream-passport",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ElleAK/Group-7-Project.git"
+    "url": "git+https://github.com/ElleAK/my-dream-passport.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ElleAK/Group-7-Project/issues"
+    "url": "https://github.com/ElleAK/my-dream-passport/issues"
   },
-  "homepage": "https://github.com/ElleAK/Group-7-Project#readme",
+  "homepage": "https://github.com/ElleAK/my-dream-passport#readme",
   "dependencies": {
     "agenda": "^4.3.0",
     "bcrypt": "^5.0.1",

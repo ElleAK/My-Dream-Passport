@@ -1,12 +1,15 @@
 {{!-- {{#if loggedIn}} --}}
-<article>
-<h2>Places I dream of visiting</h2>
 
+    <section class="p-3 bg-dark text-light">
+      <h2>Places I dream of visiting</h2>
+    </section><br>
+
+<article class="p-4">
 <!--Answers to dream questions when logged in-->
 <div class="log-container">
     <div class="card-header">
-        <ul class="dream">
-            <li>
+        <ul class="dream list-inline">
+            <li class="list-inline-item">
                 <p>Location: {{location}}</p>
                 <p>Season:{{season}} </p>
                 <p>Do I want to travel within the year?{{year}}</p>

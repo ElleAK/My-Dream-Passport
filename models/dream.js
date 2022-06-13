@@ -2,8 +2,11 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 const bcrypt = require('bcrypt');
 
+//create newDestination model
 class newDestination extends Model {}
 
+
+//Columns for model
 newDestination.init(
     {
       id: {
@@ -13,27 +16,15 @@ newDestination.init(
         autoIncrement: true
       },
       location: {
-        type: DataTypes.BOOLEAN,
+        type: DataTypes.STRING,
         allowNull: false
       },
-      dateOfDeparture: {
-        type: DataTypes.DATE,
-        allowNull: false
-      },
-      returnDate: {
-        type: DataTypes.DATE,
-        allowNull: false,
-      },
-      wouldTravelAgain: {
-        type: DataTypes.BOOLEAN,
-        allowNull: false,
-      },
-      transportation: {
+      season: {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      tripComment: {
-        type: DataTypes.STRING,
+      year: {
+        type: DataTypes.BOOLEAN,
         allowNull: false,
       }
     },

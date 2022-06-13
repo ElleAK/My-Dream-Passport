@@ -1,10 +1,15 @@
-const router = require('express').Router();
-const newDestinationRoutes = require('./new-Destination-routes');
-const visitedRoutes = require('./visited-routes');
-const login = require('./login-routes')
 
-router.use('/login', login);
-router.use('/add-new', newDestinationRoutes);
-router.use('/visited', visitedRoutes);
+const router = require('express').Router();
+const dreamRoutes = require('./dream-routes');
+const visitedRoutes = require('./visited-routes');
+//const homepage = require('./homepage-rout');
+const homeRoutes = require('../home-routes');
+const userRoutes = require('./user-routes');
+
+
+router.use('/users', userRoutes);
+router.use('/visited', dreamRoutes);
+router.use('/dream', visitedRoutes);
+router.use('/homepage', homeRoutes);
 
 module.exports = router;

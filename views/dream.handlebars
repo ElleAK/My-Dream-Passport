@@ -1,0 +1,21 @@
+{{!-- {{#if loggedIn}} --}}
+<article>
+<h1>Places I dream of visiting</h1>
+
+<!--Answers to dream questions when logged in-->
+<div class="log-container">
+    <div class="card-header">
+        <ul class="dream">
+            <li>
+                <p>Location: {{location}}</p>
+                <p>Season:{{season}} </p>
+                <p>Do I want to travel within the year?{{year}}</p>
+            </li>
+        </ul>
+    </div>
+</div>
+</article>
+<!--if not logged in-->
+{{!-- {{else}} --}}
+<a href="/login">Please login to view your trip log.</a>
+{{!-- {{/if}} --}}

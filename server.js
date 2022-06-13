@@ -50,9 +50,8 @@ app.use(require('./controllers/'));
 //   });
 
 // Starts the server to begin listening
-sequelize.sync({ force: false}).then (() => {
-app.listen(PORT, () => 
-    console.log(`Server listening`));
-  });
+app.listen(PORT, () => {
+  console.log('Server listening on: http://localhost:' + PORT);
+});
   
   console.log("it worked");

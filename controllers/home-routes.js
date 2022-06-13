@@ -11,30 +11,31 @@ router.get('/', (req, res) => {
 });
 
 router.get('/dream', (req, res) => {
-  console.log(req.session);
-  dream.findAll({
-    attributes: [
-      'id',
-      'dream_location',
-      'dream_season',
-      'dream_year'
-    ],
-    include: [
-      {
-        model: users,
-        attributes: ['username']
-      }
-    ]
-  })
-    .then(dbDreamData => {
-      // pass a single post object into the dream.handlebars template
-      res.render('dream', dbDreamData[0]);
-    })
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-});
+  res.render('dream');
+  // console.log(req.session);
+  // dream.findAll({
+  //   attributes: [
+  //     'id',
+  //     'dream_location',
+  //     'dream_season',
+  //     'dream_year',
+  //   ],
+  //   include: [
+  //     {
+  //       model: users,
+  //       attributes: ['username']
+  //     }
+  //   ]
+  // })
+  //   .then(dbDreamData => {
+  //     // pass a single post object into the dream.handlebars template
+  //     res.render('dream', dbDreamData[0]);
+  //   })
+  //   .catch(err => {
+  //     console.log(err);
+  //     res.status(500).json(err);
+  //   });
+ });
 
 router.get('/visited', (req, res) => {
   res.render('visited');

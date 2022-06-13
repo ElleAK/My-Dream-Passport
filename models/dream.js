@@ -3,11 +3,11 @@ const sequelize = require('../config/connection');
 const bcrypt = require('bcrypt');
 
 //create newDestination model
-class newDestination extends Model {}
+class dream extends Model {}
 
 
 //Columns for model
-newDestination.init(
+dream.init(
     {
       id: {
         type: DataTypes.INTEGER,
@@ -33,8 +33,8 @@ newDestination.init(
       timestamps: false,
       freezeTableName: true,
       underscored: true,
-      modelName: 'newDestination'
+      modelName: 'dream'
     }
 );
 
-module.exports = newDestination
+module.exports = dream;

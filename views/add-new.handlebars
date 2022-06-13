@@ -1,16 +1,17 @@
 
-    <h1>Add a new destination...</h1>
-    <section class="p-3 bg-dark">
+    <h2>Add a new destination...</h2>
+    <section class="p-3 bg-secondary">
         <p>Click one of the links below to add an entry to your travel log 
             or keep track of the places you would like to visit!</p>
 
-        <button>I have traveled to this location</button>
-        <button>I am dreaming of a vacation</button>
+        <button class="btn btn-info">I have traveled to this location</button>
+        <button class="btn btn-info">I am dreaming of a vacation</button>
     </section>
 
-        <h1>Add a trip to my log</h1>
-
-        <form class="form form-trip">
+<div class="container justify-space-around-md">
+        <h3>Add a trip to my log</h3>
+<div class="border border-dark">
+        <form class="form form-trip p-4">
             <label for="location">Location:</label>
             <input type="text" id="location"><br>
     
@@ -27,26 +28,30 @@
     
             <label for="transportation">How did I get there?</label><br>
                 <select id="transportation">
+                    <option value=""></option>
                     <option value="car">Road Trip</option>
                     <option value="boat">Cruise</option>
                     <option value="plane">Plane</option>
                     <option value="other">Other</option><br>
-                </select>
+                </select><br>
     
             <label for="description">How was the trip?:</label>
-            <input type="textarea" id="description" name="description"><br>
+            <input class="form-control" type="textarea" id="description" name="description"><br>
             <button type="submit">Add</button>
     
         </form>
+</div>
+<br><br>
 
-    <h1>Add a destination to my dream list</h1>
-
-    <form class="form form-dream">
+    <h3>Add a destination to my dream list</h3>
+<div class="border border-dark">
+    <form class="form form-dream p-4">
         <label for="location">Location:</label>
         <input type="text" id="location"><br>
     
         <label for="season">Preferred Season:</label>
             <select id="season">
+        <option value=""></option>
         <option value="spring">Spring</option>
         <option value="summer">Summer</option>
         <option value="fall">Fall</option>
@@ -57,10 +62,14 @@
         <input id="toggle-yes" name="toggle" type="radio">
         <label for="toggle-yes">Yes</label>
         <input id="toggle-no" name="toggle" type="radio">
-        <label for="toggle-no">No</label><br>
+        <label for="toggle-no">No</label><br><br>
         <button type="submit">Add</button>
     
     </form>
+    </div>
+</div>
+
+<br><br>
 
 </body>
 <script src="/js/dreamDest.js"></script>

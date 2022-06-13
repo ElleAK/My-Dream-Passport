@@ -14,7 +14,7 @@ const loginFormHandler = async (event) => {
       if (response.ok) {
         document.location.replace('/');
       } else {
-        alert('Failed to log in.');
+        alert("Make sure email and password are correct and try again");
       }
     }
   };
@@ -36,16 +36,13 @@ const loginFormHandler = async (event) => {
       if (response.ok) {
         document.location.replace('/');
       } else {
-        alert('Failed to sign up.');
+        alert("Something went wrong. Please try again.");
       }
     }
   };
   
-  document
-    .querySelector('.login-form')
-    .addEventListener('submit', loginFormHandler);
   
-  document
-    .querySelector('.signup-form')
-    .addEventListener('submit', signupFormHandler);
+  document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
+  
+  document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
   

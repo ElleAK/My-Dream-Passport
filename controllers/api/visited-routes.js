@@ -1,6 +1,9 @@
 
 const router = require('express').Router();
 const { visited } = require('../../models');
+
+
+
 //routes will use /api/SignUp/ {route}
 router.get('/', async (req, res) => {
     //get route code here

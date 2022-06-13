@@ -12,7 +12,7 @@
 
         <form class="form form-trip">
             <label for="location">Location:</label>
-            <input type="text" id="location"><br>
+            <input type="text" id="visited-location"><br>
     
             <label for="date">Date of Departure:</label>
             <input type="date" id="ddate"><br>
@@ -26,7 +26,7 @@
             <label for="toggle-no">No</label><br>
     
             <label for="transportation">How did I get there?</label><br>
-                <select id="transportation">
+                <select id="visited-transportation">
                     <option value="car">Road Trip</option>
                     <option value="boat">Cruise</option>
                     <option value="plane">Plane</option>
@@ -41,19 +41,19 @@
 
     <h1>Add a destination to my dream list</h1>
 
-    <form class="form form-dream">
+    <form class="form-dream">
         <label for="location">Location:</label>
-        <input type="text" id="location"><br>
+        <input type="text" id="dream-location"><br>
     
         <label for="season">Preferred Season:</label>
-            <select id="season">
+            <select id="dream-season">
         <option value="spring">Spring</option>
         <option value="summer">Summer</option>
         <option value="fall">Fall</option>
         <option value="winter">Winter</option>
             </select><br>
 
-        <label for="year">Do I plan to travel within the year?</label>
+        <label for="within-year">Do I plan to travel within the year?</label>
         <input id="toggle-yes" name="toggle" type="radio">
         <label for="toggle-yes">Yes</label>
         <input id="toggle-no" name="toggle" type="radio">

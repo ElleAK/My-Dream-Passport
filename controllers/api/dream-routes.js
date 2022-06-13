@@ -5,10 +5,10 @@ const { dream } = require('../../models');
 
 
 //routes will use /api/SignUp/ {route}
-router.get('/', (req, res) => {
-    //get route code here
-  res.render('signup');
-});
+// router.get('/', (req, res) => {
+//     //get route code here
+//   res.render('signup');
+// });
 
 router.get('/dream', (req, res) => {
   dream.findAll({
@@ -16,7 +16,7 @@ router.get('/dream', (req, res) => {
           'id',
           'dream_location',
           'dream_season',
-          'dream_year'
+          // 'dream_year'
         ],
         include:[
           {
@@ -25,10 +25,7 @@ router.get('/dream', (req, res) => {
           }
         ]
       })
-        .then(dbDreamData => {
-      //    pass a single post object into the dream.handlebars template
-          res.render('dream', dbDreamData[0]);
-        })
+        .then(dbDreamData => res.json(dbDreamData))
         .catch(err => {
           console.log(err);
           res.status(500).json(err);
@@ -41,7 +38,7 @@ router.post('/', (req, res) => {
     id:        req.body.id,
     location:  req.body.location,
     season:    req.body.season,
-    year:      req.body.year,
+    // year:      req.body.year,
   })
     .catch(err => {
         console.log(err);

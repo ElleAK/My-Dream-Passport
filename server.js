@@ -49,13 +49,15 @@ app.use(require('./controllers/'));
 //   res.render('main', {layout : 'homepage'});
 //   });
 
-// Starts the server to begin listening
-// sequelize.sync({ force: false}).then (() => {
-// app.listen(PORT, () => 
-//     console.log(`Server listening`));
-//   });
-  app.listen(PORT, () => {
-    console.log('Server listening on: http://localhost:' + PORT);
+//Starts the server to begin listening
+sequelize.sync({ force: false}).then (() => {
+app.listen(PORT, () => 
+    console.log(`Server listening`));
   });
+
+// this worked with heroku for about a minute
+  // app.listen(PORT, () => {
+  //   console.log('Server listening on: http://localhost:' + PORT);
+  // });
 
   console.log("it worked");

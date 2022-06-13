@@ -9,14 +9,14 @@ const { visited } = require('../../models');
 //     //get route code here
 //   res.render('signup');
 // });
-router.get('/', (req, res) => {
-  visited.findAll()
-    .then(dbVisitedData => res.json(dbVisitedData))
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-});
+// router.get('/', (req, res) => {
+//   visited.findAll()
+//     .then(dbVisitedData => res.json(dbVisitedData))
+//     .catch(err => {
+//       console.log(err);
+//       res.status(500).json(err);
+//     });
+// });
 
 router.post('/', (req, res) => {
     console.log(req.body)

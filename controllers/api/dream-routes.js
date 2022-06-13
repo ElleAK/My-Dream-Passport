@@ -5,10 +5,10 @@ const { dream } = require('../../models');
 
 
 //routes will use /api/SignUp/ {route}
-router.get('/', (req, res) => {
-    //get route code here
-  res.render('signup');
-});
+// router.get('/', (req, res) => {
+//     //get route code here
+//   res.render('signup');
+// });
 
 // router.get('/dream', (req, res) => {
 //   dream.findAll({
@@ -41,7 +41,7 @@ router.post('/', (req, res) => {
     id:        req.body.id,
     location:  req.body.location,
     season:    req.body.season,
-    year:      req.body.year,
+    // year:      req.body.year,
   })
     .catch(err => {
         console.log(err);

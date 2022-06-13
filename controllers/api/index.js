@@ -8,8 +8,8 @@ const userRoutes = require('./user-routes');
 
 
 router.use('/users', userRoutes);
-router.use('/visited', dreamRoutes);
-router.use('/dream', visitedRoutes);
+router.use('/visited', visitedRoutes);
+router.use('/dream', dreamRoutes);
 router.use('/homepage', homeRoutes);
 
 module.exports = router;

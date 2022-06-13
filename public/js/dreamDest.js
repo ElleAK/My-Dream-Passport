@@ -1,9 +1,9 @@
-async function dreamFormHandler(event) {
+const dreamFormHandler = async (event) => {
     event.preventDefault();
 
-    const dream_location = document.querySelector('text[name="dream_location"]').value;
-    const dream_season = document.querySelector('input[name="dream_season"]').value;
-    const dream_year = document.querySelector('radio[name="dream_year"]').value;
+    const dream_location = document.querySelector('#dream-location').value;
+    const dream_season = document.querySelector('#dream-season').value;
+    // const dream_year = document.querySelector('#within-year').value;
     const dream_id = window.location.toString().split('/')[
       window.location.toString().split('/').length - 1
     ];
@@ -15,7 +15,7 @@ const response = await fetch(`/api/posts`, {
       dream_id,
       dream_location,
       dream_season,
-      dream_year
+    //   dream_year
     }),
     headers: {
       'Content-Type': 'application/json'
@@ -29,7 +29,6 @@ const response = await fetch(`/api/posts`, {
   }
 }
 
-console.log('woo');
 };
 
 document.querySelector('.form-dream').addEventListener('submit', dreamFormHandler);

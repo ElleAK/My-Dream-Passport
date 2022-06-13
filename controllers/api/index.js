@@ -1,13 +1,15 @@
+
 const router = require('express').Router();
-const newDestinationRoutes = require('./new-Destination-routes');
+const dreamRoutes = require('./dream-routes');
 const visitedRoutes = require('./visited-routes');
-const homepage = require('./homepage-rout');
+//const homepage = require('./homepage-rout');
+const homeRoutes = require('../home-routes');
 const userRoutes = require('./user-routes');
 
 
 router.use('/users', userRoutes);
-router.use('/visited', newDestinationRoutes);
-router.use('/newDestination', visitedRoutes);
-router.use('/homepage', homepage);
+router.use('/visited', dreamRoutes);
+router.use('/dream', visitedRoutes);
+router.use('/homepage', homeRoutes);
 
 module.exports = router;

@@ -9,10 +9,10 @@ const session = require('express-session');
 
 // Sets up the Express App
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 
 // Set up sessions
-const sequelize = require("./config/connection");
+const sequelize = require("./config/connection").default;
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const sess = {

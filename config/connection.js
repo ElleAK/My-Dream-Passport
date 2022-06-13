@@ -1,8 +1,7 @@
 // import the Sequelize constructor from the library
-const Sequelize = require('sequelize');
+import Sequelize from 'sequelize';
 require('dotenv').config();
 
-let sequelize;
 
 if (process.env.JAWSDB_URL) {
   sequelize = new Sequelize(process.env.JAWSDB_URL);
@@ -33,4 +32,4 @@ if (process.env.JAWSDB_URL) {
 // );
 
 
-module.exports = sequelize;
+export default sequelize;

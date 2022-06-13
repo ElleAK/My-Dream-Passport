@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const sequelize = require('../config/connection');
+const sequelize = require('../config/connection').default;
 const { dream, visited, users } = require('../models');
 
 // 

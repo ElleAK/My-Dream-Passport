@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection').default;
+const sequelize = require('../config/connection');
 const bcrypt = require('bcrypt');
 
 // Create Visited model

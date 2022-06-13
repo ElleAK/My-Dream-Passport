@@ -1,0 +1,23 @@
+{{!-- {{#if loggedIn}} --}}
+
+<h2>Places I've Visited</h2>
+<!--Answers to visited question when logged in-->
+<div class="log-container">
+    <div class="card-header">
+        <ul class="visited">
+            <li>
+                <p>Location: {{location}}</p>
+                <p>Departure Date:{{dateOfDeparture}} </p>
+                <p>Return Date:{{returnDate}} </p>
+                <p>Would I return?{{wouldTravelAgain}}</p>
+                <p>Mode of Transportation:{{transportation}}</p>
+                <p>My Experience:{{tripComment}}</p>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!--if not logged in-->
+{{!-- {{else}} --}}
+<a href="/login">Please login to view your trip log.</a>
+{{!-- {{/if}} --}}

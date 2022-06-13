@@ -8,7 +8,7 @@ const session = require('express-session');
 
 // Sets up the Express App
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 // Set up sessions
 const sequelize = require("./config/connection");
@@ -54,9 +54,8 @@ app.use(require('./controllers/'));
 // app.listen(PORT, () => 
 //     console.log(`Server listening`));
 //   });
-
-app.listen(PORT, () => {
-  console.log(`server now on port ${PORT}!`);
-});
+  app.listen(PORT, () => {
+    console.log('Server listening on: http://localhost:' + PORT);
+  });
 
   console.log("it worked");

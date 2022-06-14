@@ -47,14 +47,11 @@ app.use(require('./controllers/'));
 app.use(function (req, res, next) {
   res.status(404).send('Cant find route');
 
-<<<<<<< HEAD
 })
-=======
 // app.get('/', (req, res) => {
 //   //Serves the body of the page main.handlebars to the container homepage.handlebars
 //   res.render('main', {layout : 'homepage'});
 //   });
->>>>>>> a3936508f3c7957d037d518893ac59998c60a803
 
 // Starts the server to begin listening
 sequelize.sync({ force: false}).then (() => {

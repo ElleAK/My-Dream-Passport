@@ -19,14 +19,14 @@ dream.init(
         type: DataTypes.STRING,
         allowNull: false
       },
-      season: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      year: {
-        type: DataTypes.BOOLEAN,
-        allowNull: false,
-      }
+      // season: {
+      //   type: DataTypes.STRING,
+      //   allowNull: false,
+      // },
+      // year: {
+      //   type: DataTypes.BOOLEAN,
+      //   allowNull: false,
+      // }
     },
     {
       sequelize,

@@ -10,15 +10,12 @@
     <div class="card-header">
         <ul class="dream list-inline">
             <li class="list-inline-item">
-                <p>Location: {{location}}</p>
-                <p>Season:{{season}} </p>
-                <p>Do I want to travel within the year?{{year}}</p>
+                {{> dream-info}}
             </li>
         </ul>
     </div>
 </div>
 </article>
-<!--if not logged in-->
-{{!-- {{else}} --}}
+{{!-- {{else}}
 <a href="/login">Please login to view your trip log.</a>
-{{!-- {{/if}} --}}
+{{/if}} --}}

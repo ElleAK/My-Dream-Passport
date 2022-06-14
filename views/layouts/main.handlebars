@@ -25,9 +25,9 @@
         {{!-- {{#if loggedIn}} --}}
         <a href="/logout"><button id="logout" class="btn btn-light shadow">Log Out</button></a>
         <nav class="d-flex justify-content-around align-items-center">
-            <a href="/add-new"><button type="button" class="btn btn-primary shadow">New Destination</button></a>
-            <a href="/visited"><button type="button" class="btn btn-primary shadow">Travel History</button></a>
-            <a href="/dream"><button type="button" class="btn btn-primary shadow">Places I Want To Go</button></a>
+            <a href="/add-new"><button type="button" class="btn btn-secondary shadow">Add Destination</button></a>
+            <a href="/visited"><button type="button" class="btn btn-dark shadow">Travel Log</button></a>
+            <a href="/dream"><button type="button" class="btn btn-dark shadow">Dream List</button></a>
         </nav>
  
         {{!-- {{else}} --}}
@@ -36,6 +36,12 @@
     </header>
     <main>
         {{{ body }}}
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+  </div>
+</div>
     </main>
       <!-- If the user is logged in, load the JS script for when they logout else load login-->
   {{!-- {{#if loggedIn}} --}}

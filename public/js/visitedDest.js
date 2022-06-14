@@ -1,13 +1,13 @@
-async function visitedFormHandler(event) {
+const visitedFormHandler = async (event) => {
     event.preventDefault();
   
-    const visited_location = document.querySelector('text[name="visited_location"]').value;
-    const visited_departure = document.querySelector('date[name="visited_departure"]').value;
-    const visited_returnDate = document.querySelector('date[name="visited_returnDate"]').value;
+    const visited_location = document.querySelector('#visited-location').value;
+    const visited_departure = document.querySelector('#ddate').value;
+    const visited_returnDate = document.querySelector('#rdate').value;
     // boolean for return? or option for the next one??
-    const visited_return = document.querySelector('boolean[name="visited_return"]').value;
-    const visited_transportation = document.querySelector('option[name="visited_transportation"]').value;
-    const visited_description = document.querySelector('textarea[name="visited_description"]').value;
+    // const visited_return = document.querySelector('boolean[name="visited_return"]').value;
+    const visited_transportation = document.querySelector('#visited-transportation').value;
+    const visited_description = document.querySelector('#description').value;
     const visited_id = window.location.toString().split('/')[
       window.location.toString().split('/').length - 1
     ];
@@ -20,7 +20,7 @@ async function visitedFormHandler(event) {
         visited_location,
         visited_departure,
         visited_returnDate,
-        visited_return,
+        // visited_return,
         visited_transportation,
         visited_description
       }),
@@ -37,5 +37,5 @@ async function visitedFormHandler(event) {
   }
 }
   
-  document.querySelector('.new-visited-form').addEventListener('submit', newFormHandler);
+  document.querySelector('.form-trip').addEventListener('submit', visitedFormHandler);
   
